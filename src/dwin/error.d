@@ -11,6 +11,13 @@ import std.conv, std.string, std.exception;
 
 import win32.winbase;
 
+extern(Windows) {
+    UINT GetErrorMode();
+    UINT SetErrorMode(UINT);
+    DWORD GetThreadErrorMode();
+    BOOL SetThreadErrorMode(DWORD, LPDWORD);
+}
+
 class Win32Exception : Exception {
     public const DWORD code;
 

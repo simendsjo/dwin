@@ -46,6 +46,7 @@ extern(Windows) {
     alias BOOL function(LPWSTR, DWORD, LPARAM) LOCALE_ENUMPROCEX;
     BOOL EnumSystemLocalesEx(LOCALE_ENUMPROCEX, DWORD, LPARAM, LPVOID);
     int GetLocaleInfoEx(LPCWSTR, LCTYPE, LPWSTR, int);
+    int LCIDToLocaleName(LCID, LPWSTR, int, DWORD);
 }
 
 enum CP_INSTALLED = 0x00000001;
