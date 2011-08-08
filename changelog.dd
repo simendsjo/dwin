@@ -5,6 +5,16 @@ $(DOC_HOME_LINK Documentation home)$(BR)
 $(PROJECT_HOME_LINK Project home)$(BR)
 )
 
+$(VERSION 0.002, 2011-mm-dd,
+===========================,
+	$(NEW
+		$(LI )
+	)$(BR)
+	$(FIXES
+		$(LI )
+	)
+)
+
 $(VERSION 0.001, 2011-08-08,
 ===========================,
 	$(NEW
