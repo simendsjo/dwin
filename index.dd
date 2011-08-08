@@ -1,0 +1,239 @@
+Ddoc
+
+$(P
+The purpose of the library is to make Win32 programming easier by
+giving a more $(DPL) like interface while taking advantage of $(DPL)'s safety features.
+)
+
+Quick Links:
+$(UL
+    $(P
+        $(LI $(LINK2 $(GIT_HOME),           Project home) - Source code, issue tracker and more)
+    )
+    $(P
+        $(LI $(A_FRAGREF Contributors,      HALL OF FAME) - Contributors)
+        $(LI $(A_FRAGREF Contributing,      Contributing) - Help improve the project)
+        $(LI $(DWIN_GROUP Discuss dwin) - Ask for help or discuss dwin)
+    )
+    $(LI $(A_FRAGREF Installation,      Installation) - Compiling and installing the library)
+    $(LI $(A_FRAGREF Example,           Example) - A small example application)
+    $(LI $(A_FRAGREF Modules,           Modules) - List of modules in the project)
+    $(LI $(HOME_LINK changelog.html,    Changelog) - Changes between versions)
+)
+
+$(P
+This is not meant as a OS independent library, and I will not, by far, wrap
+every win32 function.
+$(BR)Because of this, the library exposes all win32 handles
+where possible so you can mix regular win32 with this library.
+)
+
+$(P
+It is a thin wrapper, meaning there are no deep class hieriarcies, and is modelled very much like the win32 calls and using mostly the same names.
+)
+
+$(P
+The best solution would of course be if Phobos, the standard library, included
+all functionality, but this is difficult as everything in the stdlib should be
+cross platform.$(BR)
+Hopefully Phobos will get much of win32's functionality in time, but until
+then, there's dwin.
+)
+
+Remarks:
+$(UL
+    $(LI $(I$(B Very)) $(WIKIPEDIA Pre-alpha#Pre-alpha, pre-alpha) quality;
+        The API $(U will) change,
+        $(A_FRAGREF Modules, there is very little functionality), very little tested.
+        $(BIG $(B Do $(U NOT) use for $(WIKIPEDIA Mission_critical, mission critical) code!))
+    )
+    $(LI Only Windows 7 support - Hopefully temporary)
+    $(LI Only D2 (DMD 2.054) and Phobos support)
+    $(LI dwin programs must be compiled with "-version=Unicode -version=WindowsVista")
+    $(LI I have no education, and dwin is a learning exercise for win32, $(DPL) and open source development)
+)
+
+
+<h2>$(A_NAME Contributing)</h2>
+$(P
+As with most open source projects, this project too needs contributors to succeed.
+)
+
+$(P
+Remember that there are more ways to contribute than just writing code.$(BR)
+$(BIG$(I$(B The important thing is not how much you contribute, or how groundbreaking the contribution is, just that you do something!)))
+)
+
+$(P
+Everything you contribute to this project has to be licensed under $(BOOST) or a more liberal license (like $(WIKIPEDIA Public_Domain, Public Domain)).
+)
+
+What you can do to help:
+$(UL
+    $(LI $(ISSUES_LINK Submit bug reports and feature requests))
+    $(LI Contribute to $(DPL). $(LINK2 https://github.com/D-Programming-Language, Write code for DMD, Phobos), write about $(DPL), or just be active on $(LINK2 http://www.digitalmars.com/NewsGroup.html, the newsgroup))
+    $(LI $(DWIN_GROUP Discuss) dwin in the forum)
+    $(LI $(MAIL $(SIMENDSJO_EMAIL), Give me feedback by mail))
+    $(LI Use dwin for your projects)
+    $(LI Wrap more win32 functions)
+    $(LI Write new modules)
+    $(LI Fix $(ISSUES_LINK bugs))
+    $(LI Test the library on different machines)
+    $(LI Improve existing code)
+    $(LI Improve documentation)
+    $(LI Add some CSS to make the documentation prettier)
+    $(LI Write sample code, tutorials, or just anything about dwin)
+    $(LI .. Or contribute in any other way you feel like! )
+)
+
+Getting started:
+$(OL
+    $(LI $(HOME_LINK fork, Fork the project in github))
+    $(LI $(A_FRAGREF Installation, Compile the library))
+    $(LI Add your name to ALL_AUTHORS in $(SOURCE_LINK dwin.ddoc) for $(A_FRAGREF Contributors, fame and glory!))
+    $(P
+        $(LI $(B Hack away and have fun!) (remember to add unittests))
+        $(LI Build the library using build_all.bat, and run the tests with test.exe)
+        $(LI Document your new features, breaking changes and bugfixes in $(SOURCE_LINK changelog.dd).
+            $(UL
+                $(LI If adding a module, add the module name to $(SOURCE_LINK index.dd))
+                $(LI If doing major changes to a module, add yourself to the Authors section)
+            )
+        )
+        $(LI Send a pull request)
+        $(LI Back to 4)
+    )
+)
+
+Useful links:
+$(UL
+    $(LI [Documentation] $(WEB d-programming-language.org, Official D website))
+    $(LI [Code] $(LINK2 http://dsource.org/projects/bindings/wiki/WindowsApi,
+            Converted win32 headers) - Required for dwin)
+    $(LI [Wiki] $(LINK2 http://en.wikibooks.org/wiki/Windows_Programming/Handles_and_Data_Types,
+        Windows Programming/Handles and Data Types) - Recommended as dwin doesn't hide Win32 types)
+    $(LI [Documentation] $(MSDN ff818516.aspx, Windows API List) - Categorical list of Win32 API)
+    $(LI [Documentation] $(WEB d-programming-language.org/ddoc.html, DDoc documentation) - All code and all documentation for dwin (including this page) is written using DDoc)
+    $(LI [Article] $(LINK2 http://www.d-programming-language.org/interfaceToC.html,
+            Interfacing D to C))
+    $(LI [Article] $(LINK2 http://www.d-programming-language.org/windows.html,
+            D For Win32))
+    $(LI [Article] $(LINK2 http://www.d-programming-language.org/htomodule.html,
+            Converting .h to D modules))
+    $(LI [Code] $(LINK2 https://github.com/AndrejMitrovic/DWinProgramming,
+            Win32 programming examples for D))
+    $(LI [Code] $(LINK2 http://dsource.org/projects/juno,
+        The Juno Project) - A dead project with similar objectives as dwin)
+    $(LI [Tool] $(COFFIMPLIB) - Convert Import Libraries in COFF Format to OMF Format)
+    $(LI [Tool] $(IMPLIB) - Build an OMF Import Library from a DLL)
+    $(LI [Tool] $(LINK2 http://www.digitalmars.com/d/2.0/htod.html,
+        HTOD) - Automatically convert a C header (.d) to a $(DPL) module)
+)
+
+<h2>$(A_NAME2 Contributors, HALL OF FAME)</h2>
+$(P
+    $(A_FRAGREF Contributing, Contribute) to get your name on the wall ;$(RPAREN)
+)
+$(DDOC_SECTION_H Contributors:)
+$(DDOC_SECTION $(ALL_AUTHORS))
+
+<h2>$(A_NAME Modules)</h2>
+The modules are loosely modelled after the categories in
+$(MSDN ff818516.aspx, Windows API List).
+$(DL
+    $(DEF $(HOME_LINK build.html, build),   Tool to build the dwin project)
+    $(DEF $(HOME_LINK test.html, test),     Runs tests for the dwin project)
+
+    $(DOC_MODULE_DEF core,      Utilities for wrapping win32 functions)
+    $(DOC_MODULE_DEF nls,       National Language Support. Globalization and localization features)
+    $(DOC_MODULE_DEF process,   Processes and threads)
+    $(DOC_MODULE_DEF keyboard,  Keyboard)
+    $(DOC_MODULE_DEF console,   Console)
+    $(DOC_MODULE_DEF window,    GUI)
+)
+
+<h2>$(A_NAME Installation)</h2>
+$(P
+Update your sc.ini file to search the library and import folder:
+$(PRE
+EXT = "C:\d\ext"
+DWIN="%EXT%\dwin"
+DWIN_LIB="%DWIN%\lib"
+DWIN_IMP="%DWIN%\import"
+
+LIB="%@P%\..\lib";\dm\lib;%DWIN_LIB%
+DFLAGS="-I%@P%\..\..\src\phobos" "-I%@P%\..\..\src\druntime\import" "-I%DWIN_IMP%"
+)
+)
+
+<h3>Binary distribution</h3>
+$(P
+If you don't want to build the library yoursely, you can
+$(LINK2 $(GIT_HOME)/archives/master, download the binary distribution)$(BR)
+Remember to copy or move dwin\lib\kernel32.lib to "path\to\dmd\lib\kernel32.lib"
+)
+
+<h3>Compiling from source</h3>
+$(P
+Download $(LINK2 $(GIT_HOME), the dwin source code).
+)
+
+$(P
+Download the win32 bindings
+$(LINK2 http://dsource.org/projects/bindings/wiki/WindowsApi, from the project page)
+, and put it in [dwin folder]\src\win32 folder.$(BR)
+If you already have win32, you can just create a symlink.
+)
+
+$(P
+The win32 libraries that ships with DMD is not up to date with the latest
+version of windows.$(BR)
+First you need to $(LINK2 http://msdn.microsoft.com/en-us/windows/bb980924, install the Windows SDK).$(BR)
+Then download $(COFFIMPLIB_DOWNLOAD).$(BR)
+Use $(COFFIMPLIB) to convert kernel32.lib:
+$(PRE coffimplib "path/to/win/sdk/kernel32.lib" "path/to/dmd/lib/kernel32.lib")
+)
+
+$(P
+And finally, all should be ready to build the library:
+$(PRE
+build_all.bat
+)
+
+After you have run the batch file, you can run build.exe directly to rebuild only parts of the project.$(BR)
+Run build.exe without parameters to see the options.
+)
+
+$(P
+dwin.lib includes the entire win32.lib, so unless you are going to hack on dwin, win32.lib is not needed after compiling dwin.lib
+)
+
+<h2>$(A_NAME Example)</h2>
+---
+module example;
+pragma(lib, "dwin.lib");
+import dwin.nls;
+void main() {
+}
+---
+Run it (you must always have these versions when building dwin programs):
+$(PRE
+dmd -version=Unicode -version=WindowsVista -run example
+)
+
+
+Macros:
+TITLE       = dwin - Simplify Windows Programming for D
+PRE         = <pre>$0</pre>
+DEF         = $(DT $1) $(DD $+)
+A_NAME      = <a name="$0">$0</a>
+A_NAME2     = <a name="$1">$+</a>
+A_REF       = <a href="$1">$+</a>
+A_FRAGREF   = $(A_REF #$1, $+)
+
+DOC_MODULE_DEF      = $(DEF $(DOC_MODULE_LINK $1) ,$+)
+COFFIMPLIB          = $(LINK2 http://www.digitalmars.com/ctg/coffimplib.html, COFFIMPLIB)
+COFFIMPLIB_DOWNLOAD = $(LINK2 ftp://ftp.digitalmars.com/coffimplib.zip, COFFIMPLIB)
+IMPLIB              = $(LINK2 http://www.digitalmars.com/ctg/implib.html, IMPLIB)
+
+DWIN_GROUP          = $(LINK2 http://groups.google.com/group/dwin-discussions, $0)
