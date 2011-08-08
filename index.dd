@@ -182,6 +182,7 @@ $(P
 Download the win32 bindings
 $(LINK2 http://dsource.org/projects/bindings/wiki/WindowsApi, from the project page)
 , and put it in [dwin folder]\src\win32 folder.$(BR)
+If you have svn installed, you can run fetch_win32_src.bat$(BR)
 If you already have win32, you can just create a symlink.
 )
 
