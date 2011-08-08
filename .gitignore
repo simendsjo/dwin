@@ -6,3 +6,4 @@ src/win32
 *.un~
 *.exe
 *.obj
+*.zip
