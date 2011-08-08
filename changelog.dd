@@ -5,7 +5,7 @@ $(DOC_HOME_LINK Documentation home)$(BR)
 $(PROJECT_HOME_LINK Project home)$(BR)
 )
 
-$(VERSION 0.001, 2011-08-dd,
+$(VERSION 0.001, 2011-08-08,
 ===========================,
 	$(NEW
 		$(NEW_MODULE core)

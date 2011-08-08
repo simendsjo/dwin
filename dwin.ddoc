@@ -16,7 +16,7 @@ ALL_AUTHORS = $(SIMENDSJO), $(SKYBERT)
 
 DEVELOPMENT_HOME    = .
 PRODUCTION_HOME     = http://simendsjo.github.com/dwin
-HOME                = $(DEVELOPMENT_HOME)
+HOME                = $(PRODUCTION_HOME)
 HOME_LINK           = $(LINK2 $(HOME)/$1, $+)
 
 DOC_MODULE_LINK     = $(HOME_LINK dwin/$0.html, dwin.$0)
@@ -25,9 +25,9 @@ DOC_HOME_LINK       = $(HOME_LINK index.html, $0)
 GIT_HOME            = https://github.com/simendsjo/dwin
 PROJECT_HOME        = $(GIT_HOME)
 PROJECT_HOME_LINK   = $(LINK2 $(PROJECT_HOME), $0)
-CODE_TAG_LINK       = $(LINK2 $(PROJECT_HOME)/tree/v$0, $0)
+CODE_TAG_LINK       = $(LINK2 $(PROJECT_HOME)/tree/dwin-$0, $0)
 CODE_DIR            = $(PROJECT_HOME)/tree/master/dwin
-DWIN_DOWNLOAD       = $(LINK2 $(PROJECT_HOME)/tree/v$1, $+)
+DWIN_DOWNLOAD       = $(LINK2 https://github.com/downloads/simendsjo/dwin/dwin-$1.zip, $+)
 
 SOURCE              = $(CODE_DIR)/$0
 SOURCE_LINK         = $(SOURCE_LINK2 $0, $0)
